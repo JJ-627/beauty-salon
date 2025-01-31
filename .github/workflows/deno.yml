@@ -15,7 +15,8 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  id-token: write # This is crucial for OIDC token authentication
+  contents: read  # Allows reading repository contents
 
 jobs:
   deploy:
